@@ -37,8 +37,8 @@
                 background: none;
                 background-image: url("web_assets/images/buttons/how.png");
                 background-size: auto;
-                max-width: 640px;
-                max-height: 360px;
+                max-width: 100%;
+                max-height: 100%;
                 width: auto;
                 height: auto;
                 padding: 180px 320px;
@@ -56,16 +56,14 @@
 
             @media (max-width: 640px) {
                 .gameButton {
-                    max-width: 320px;
-                    max-height: 180px;
-                    padding: 90px 160px
+                    max-width: 50%;
+                    max-height: 50%;
                 }
                 #video-frame {
                     max-width: 100%;
                     max-height: 100%;
                     width: auto;
                     height: auto;
-                    object-fit: contain;
                 }
             }
         </style>
@@ -108,8 +106,7 @@
         <br>
         <br>
         <a href="sites/play.html">
-            <button class="gameButton" style="background-image: url('web_assets/images/buttons/play.png'); background-size: auto;">
-            </button>
+            <img src="web_assets/images/buttons/play.png" class="image">
         </a>
 
         <br>
@@ -121,8 +118,7 @@
         <br>
         <br>
         <a href="sites/how.html">
-            <button class="gameButton" style="background-image: url('web_assets/images/buttons/how.png'); background-size: auto;">
-            </button>
+            <img src="web_assets/images/butons/how.png" class="image">
         </a>
 
         <br>
