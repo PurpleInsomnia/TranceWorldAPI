@@ -32,17 +32,12 @@
                 height: auto;
             }
 
-            @media (max-width: 600px) {
-                .image {
-                    width: 25%;
-                }
-            }
-
             .gameButton {
                 cursor: pointer;
                 background: none;
                 background-image: url("web_assets/images/buttons/how.png");
                 background-size: auto;
+                max-width: 100%;
                 width: auto;
                 height: auto;
                 padding: 180px 320px;
@@ -53,9 +48,20 @@
                 margin: -30px auto;
             }
 
+            @media (max-width: 640px) {
+                .gameButton {
+                    max-width: 50%;
+                }
+            }
+
             #video-frame {
-              display: block;
-              margin: 0 auto;
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
             }
         </style>
 
