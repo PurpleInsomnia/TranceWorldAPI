@@ -24,26 +24,23 @@
                 background-position: center;
             }
 
+            .link-text {
+                animation: imageAnimation 2s normal;
+            }
+
             .image {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
                 width: 20%;
+                max-width: 20%;
+                height: auto;
+                animation: imageAnimation 1s normal;
             }
 
-            .gameButton {
-                cursor: pointer;
-                background: none;
-                background-image: url("../web_assets/images/buttons/how.png");
-                background-size: auto;
-                width: auto;
-                height: auto;
-                padding: 180px 320px;
-                border: none;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                margin: -30px auto;
+            @keyframes imageAnimation {
+                0% { opacity: 0;}
+                100% { opacity: 1;}
             }
         </style>
 
@@ -64,7 +61,7 @@
         <br>
         Even though it's a free game, it'll still cost money to develop further and make the game better for people to play.
         <br>
-        Donating to this project will help fund cool new music, artwork, and much more from really talented people. Donating will also help PurpleInsomnia personally, letting him know that people fw this game and he should chug another redbull.
+        Donating to this project will help fund cool new music, artwork, and much more from really talented people. Donating will also help PurpleInsomnia personally, letting him know that people fw this game and he should keep working on it.
         <br>
         Any donations are appreciated. Here are the current goals/plans this game is aiming to reach:
         </p>
@@ -78,7 +75,7 @@
         </p>
 
         <br>
-        <p style="text-align: center; font-size: 40px; color: yellow;">
+        <p style="text-align: center; font-size: 40px; color: yellow;" class="link-text">
         If you are interested in donating, it can be done <a href="https://ko-fi.com/purpleinsomnia">here</a>
         </p>
 

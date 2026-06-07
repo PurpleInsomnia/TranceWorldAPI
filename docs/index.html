@@ -15,6 +15,8 @@
                     background-position: center;
                     background-size: cover;
                     background-repeat: repeat;
+                    justify-content: center;
+                    align-items: center;
                 }
 
             p {
@@ -29,24 +31,52 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 50%;
+                max-width: 50%;
                 height: auto;
+                animation: imageAnimation 1s normal;
+            }
+
+            @keyframes imageAnimation {
+                0% { opacity: 0;}
+                100% { opacity: 1;}
             }
 
             .gameButton {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                max-width: 50%;
+                height: auto;
+                transition: transform 0.2s;
+            }
+
+            .gameButton:hover {
+                transform: scale(1.1);
+            }
+
+            .platformIcon {
                 cursor: pointer;
-                background: none;
-                background-image: url("web_assets/images/buttons/how.png");
-                background-size: auto;
+                margin-left: auto;
+                margin-right: auto;
                 max-width: 100%;
                 max-height: 100%;
-                width: auto;
                 height: auto;
-                padding: 180px 320px;
-                border: none;
-                text-align: center;
+                transition: transform 0.2s;
+            }
+
+            .platformIcon:hover {
+                transform: scale(1.1);
+            }
+
+            .platformContainer {
                 display: flex;
+                justify-items: center;
                 align-items: center;
-                margin: -30px auto;
+                gap: 15px;
+                padding: 20px;
+                max-width: 50%;
+                margin: 0 auto;
             }
 
             #video-frame {
@@ -55,14 +85,6 @@
             }
 
             @media (max-width: 640px) {
-                .image {
-                    width: 100%;
-                    height: auto;
-                }
-                .gameButton {
-                    max-width: 50%;
-                    max-height: 50%;
-                }
                 #video-frame {
                     max-width: 100%;
                     max-height: 100%;
@@ -82,36 +104,33 @@
     <body>
 
         <img src="web_assets/images/coming-soon.png" class="image">
-
-        <br>
-        <br>
-        <p style="text-align: center; font-size: 35px;">
-        WATCH THE DEMO TRAILER!!!
-        </p>
-        <br>
-        <iframe 
-            width="560" 
-            height="315"
-            id="video-frame"
-            src="https://www.youtube.com/embed/AhRLoalj0Bg?si=nlfRILUbf8QwM2yt" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen 
-            style="display: block; margin: 0 auto;">
-        </iframe>
         
         <br>
         <br>
         <p style="text-align: center; font-size: 35px;">
         PLAY THE GAME!!!
+        <br>
+        CHAPTER 1 RELEASES JUNE 10TH 2026!
         </p>
 
         <br>
         <br>
+        <!--
         <a href="sites/play.html">
             <img src="web_assets/images/buttons/play.png" class="image">
         </a>
+        -->
+        <div class="platformContainer">
+            <a href="https://www.newgrounds.com/portal/view/979798">
+                <img src="web_assets/images/buttons/newgrounds.png" class="platformIcon">
+            </a>
+            <a href="https://gamejolt.com/games/tranceworld/834210">
+                <img src="web_assets/images/buttons/gamejolt.png" class="platformIcon">
+            </a>
+            <a href="https://purpleinsomnia.itch.io/trance-world">
+                <img src="web_assets/images/buttons/itch.png" class="platformIcon">
+            </a>
+        </div>
 
         <br>
         <br>
@@ -122,7 +141,7 @@
         <br>
         <br>
         <a href="sites/how.html">
-            <img src="web_assets/images/buttons/how.png" class="image">
+            <img src="web_assets/images/buttons/how.png" class="gameButton">
         </a>
 
         <br>
